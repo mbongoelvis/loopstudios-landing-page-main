@@ -11,7 +11,13 @@
       rel="stylesheet"
     />
     <!-- fontawesome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
@@ -24,7 +30,7 @@
     <div class="lg:w-[100%] h-screen w-full font-alata">
       <!-- header -->
       <header
-        class="h-[35rem] bg-red-500 bg-[url('./images/mobile/image-hero.jpg')] bg-center bg-cover bg-no-repeat px-5 py-6"
+        class="h-[35rem] bg-red-500 bg-[url('./images/mobile/image-hero.jpg')] lg:bg-[url('./images/desktop/image-hero.jpg')] bg-center bg-cover bg-no-repeat px-5 py-6 lg:px-[5rem] xl:px-[20rem]"
       >
         <!-- nav -->
         <nav class="flex justify-between">
@@ -33,33 +39,46 @@
             <img src="./images/logo.svg" alt="" />
           </div>
           <!-- mobile links -->
-          <div class="mobile-link md:hidden">
+          <div class="mobile-link lg:hidden">
             <!-- harmburger menu -->
-            <span class="material-symbols-outlined text-white cursor-pointer">
+            <span
+              class="material-symbols-outlined text-white cursor-pointer menu"
+              onclick="openmenu()"
+            >
               menu
             </span>
             <!-- links -->
           </div>
           <!-- desktop links -->
-          <div class="desktop-link hidden md:flex">deskto</div>
+          <div class="desktop-link hidden lg:flex gap-5 text-white text-md">
+        <p class="cursor-pointer">About</p>
+        <p class="cursor-pointer">Careers</p>
+        <p class="cursor-pointer">Events</p>
+        <p class="cursor-pointer">Products</p>
+        <p class="cursor-pointer">Support</p>
+          </div>
         </nav>
         <!-- hero section -->
-        <div class="hero flex items-center min-w-[4rem] h-full w-5">
-          <p class="text-white text-5xl border px-4 py-2 font-thin">
+        <div
+          class="hero flex items-center md:w-[80%] md:h-[40%] w-[21rem] w-5 mt-[6rem]"
+        >
+          <p
+            class="text-white text-5xl border px-4 py-2 font-thin w-full h-full lg:w-[30rem]"
+          >
             IMMERSIVE EXPERIENCES THAT DELIVER
           </p>
         </div>
       </header>
       <!-- first section -->
-      <section class="px-5 mt-[5rem] flex flex-col gap-10 items-center">
+      <section class="px-5 mt-[5rem] flex flex-col lg:flex-row-reverse gap-10 items-center relative lg:h-[30rem] lg:mb-[10rem] lg:px-[5rem] xl:px-[20rem]">
         <div
-          class="w-full h-[15rem] bg-[url('./images/mobile/image-interactive.jpg')] bg-center bg-cover"
+          class="w-full h-[15rem] bg-[url('./images/mobile/image-interactive.jpg')] bg-center bg-cover ld ld-zoomin lg:h-full lg:w-[39rem] lg:mr-auto"
         ></div>
-        <div class="flex flex-col items-center gap-6">
-          <h1 class="text-center min-w-[12rem] text-4xl font-thin">
+        <div class="flex flex-col items-center gap-6 lg:absolute bg-white lg:px-[5rem] w-[35rem] xl:w-[40rem] lg:min-h-[15rem] lg:py-12 lg:top-[15rem] xl:top-[13rem] lg:px-12 z-10 lg:right-12 xl:right-[17rem]">
+          <h1 class="text-center w-[12rem] text-4xl font-thin lg:w-[23rem] lg:-ml-8 lg:text-start xl:-ml-[7rem]">
             THE LEADER IN INTERACTIVE VR
           </h1>
-          <p class="text-center w-[20rem] text-stone-500">
+          <p class="text-center w-[20rem] text-stone-500 lg:text-start w-full lg:text-md">
             Founded 2011, Loopstudios has been producing world-class virtual
             reality projects for some of the best companies around the globe.
             Our award-wining creations has transformed businesses through
@@ -68,45 +87,127 @@
         </div>
       </section>
       <!-- creationg section -->
-      <section class="mt-[6rem] px-5">
-        <h1 class="text-center text-3xl font-thin mb-12">OUR CREATIONS</h1>
-        <div class="flex flex-col w-full gap-3">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-3">
-            <div class="bg-[url('./images/mobile/image-deep-earth.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer"></div>
-            <div class="bg-[url('./images/mobile/image-night-arcade.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer"></div>
-            <div class="bg-[url('./images/mobile/image-soccer-team.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer"></div>
-            <div class="bg-[url('./images/mobile/image-grid.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer"></div>
+      <section class="mt-[6rem] px-5 lg:px-[5rem] lg:relative xl:px-[20rem]">
+        <h1 class="text-center text-3xl font-thin mb-12 lg:text-start">OUR CREATIONS</h1>
+        <div class="flex flex-col w-full gap-3 lg:h-[40rem]">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full lg:h-[50%] gap-3"
+          >
+            <div
+              class="bg-[url('./images/mobile/image-deep-earth.jpg')] lg:bg-[url('./images/desktop/image-deep-earth.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer lg:h-full "
+            >
+              <p class="text-white font-thin text-2xl mt-7 ml-4 lg:mt-[13rem]">
+                DEEP <br />EARTH
+              </p>
+            </div>
+            <div
+              class="bg-[url('./images/mobile/image-night-arcade.jpg')] lg:bg-[url('./images/desktop/image-night-arcade.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer lg:h-full "
+            >
+              <p class="text-white font-thin text-2xl mt-7 ml-4 lg:mt-[13rem]">
+                NIGHT <br />ARCADE
+              </p>
+            </div>
+            <div
+              class="bg-[url('./images/mobile/image-soccer-team.jpg')] lg:bg-[url('./images/desktop/image-soccer-team.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer lg:h-full"
+            >
+              <p class="text-white font-thin text-2xl mt-7 ml-4 lg:mt-[13rem]">
+                SOCCER <br />TEAM VR
+              </p>
+            </div>
+            <div
+              class="bg-[url('./images/mobile/image-grid.jpg')] lg:bg-[url('./images/desktop/image-grid.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer lg:h-full"
+            >
+              <p class="text-white font-thin text-2xl mt-7 ml-4 lg:mt-[13rem]">
+                THE<br />GRID
+              </p>
+            </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-3">
-            <div class="bg-[url('./images/mobile/image-from-above.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer"></div>
-            <div class="bg-[url('./images/mobile/image-pocket-borealis.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer"></div>
-            <div class="bg-[url('./images/mobile/image-curiosity.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer"></div>
-            <div class="bg-[url('./images/mobile/image-fisheye.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer"></div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-3 lg:h-[50%]"
+          >
+            <div
+              class="bg-[url('./images/mobile/image-from-above.jpg')] lg:bg-[url('./images/desktop/image-from-above.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer lg:h-full"
+            >
+              <p class="text-white font-thin text-2xl mt-7 ml-4 lg:mt-[13rem]">
+                FROM UP <br />ABOVE VR
+              </p>
+            </div>
+            <div
+              class="bg-[url('./images/mobile/image-pocket-borealis.jpg')] lg:bg-[url('./images/desktop/image-pocket-borealis.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer lg:h-full"
+            >
+              <p class="text-white font-thin text-2xl mt-7 ml-4 lg:mt-[13rem]">
+                POCKET <br />BOREALS
+              </p>
+            </div>
+            <div
+              class="bg-[url('./images/mobile/image-curiosity.jpg')] lg:bg-[url('./images/desktop/image-curiosity.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] hover:bg-opacity-50 cursor-pointer lg:h-full"
+            >
+              <p class="text-white font-thin text-2xl mt-7 ml-4 lg:mt-[13rem]">
+                THE <br />CURIOSITY
+              </p>
+            </div>
+            <div
+              class="bg-[url('./images/mobile/image-fisheye.jpg')] lg:bg-[url('./images/desktop/image-fisheye.jpg')] bg-center bg-cover bg-no-repeat h-[7rem] cursor-pointer hover:bg-blend-lighten lg:h-full"
+            >
+              <p class="text-white font-thin text-2xl mt-7 ml-4 lg:mt-[13rem]">
+                MAKE IT <br />FISHEYE
+              </p>
+            </div>
           </div>
         </div>
-        <p class="text-center mt-6 border border-black py-2 w-[9rem] mx-auto">SEE ALL</p>
+        <p
+          class="text-center mt-6 border border-black py-2 w-[9rem] mx-auto cursor-pointer lg:absolute lg:-top-4 lg:right-[5rem] xl:right-[20rem]"
+        >
+          SEE ALL
+        </p>
       </section>
 
       <!-- footer -->
-      <footer class="mt-5 min-h-12 bg-black px-5 py-12 text-white">
+      <footer class="mt-5 min-h-12 bg-black px-5 py-12 text-white lg:px-[5rem] xl:px-[20rem] lg:flex lg:justify-between lg:items-center">
         <!-- logo -->
-        <div class="logo">
-          <img src="./images/logo.svg" alt="" class="mx-auto cursor-pointer">
+        <div class="lg:flex items-start flex-col">
+          <div class="logo">
+          <img src="./images/logo.svg" alt="" class="mx-auto cursor-pointer" />
         </div>
-        <div class="links text-center mt-12 flex flex-col gap-5">
+        <div class="links text-center mt-12 flex flex-col lg:flex-row gap-5">
           <p class="cursor-pointer">About</p>
           <p class="cursor-pointer">Career</p>
           <p class="cursor-pointer">Events</p>
           <p class="cursor-pointer">Peoducts</p>
           <p class="cursor-pointer">Support</p>
         </div>
-        <div class="social mt-12">
-          <div>
-
+        </div>
+        <div class="social mt-12 lg:ml-auto lg:flex-col">
+          <div
+            class="w-full mx-auto flex gap-3 obhect-fit h-8 items-center justify-center mb-4 lg:w-full lg:mx-0 lg:ml-[5rem]"
+          >
+            <i class="fa-brands fa-square-facebook text-2xl cursor-pointer"></i>
+            <i class="fa-brands fa-twitter text-2xl cursor-pointer"></i>
+            <i class="fa-brands fa-pinterest text-2xl cursor-pointer"></i>
+            <i class="fa-brands fa-instagram text-2xl cursor-pointer"></i>
           </div>
-         <div class="flex text-gray-500 ml-12"> <p class="mx-center">&copy2021 Loopstudio. All rights reversed.</p></div>
+          <div class="text-sm flex text-gray-500 ml-12">
+            <p class="mx-center">&copy2021 Loopstudio. All rights reversed.</p>
+          </div>
         </div>
       </footer>
     </div>
+    <!-- mobile menu -->
+    <div
+      class="absolute top-0 w-full min-h-screen bg-black popmenu transition px-4 py-10 scale-0"
+    >
+      <div class="flex justify-between items-center">
+        <img src="./images/logo.svg" alt="logo" />
+        <span class="material-symbols-outlined text-white font-bold text-4xl menuclose cursor-pointer" onclick="closemenu()"> close </span>
+      </div>
+      <div class="text-white font-thin text-2xl text-gray-200 flex flex-col gap-4 mt-[10rem]">
+        <p class="cursor-pointer">ABOUT</p>
+        <p class="cursor-pointer">CAREERS</p>
+        <p class="cursor-pointer">EVENTS</p>
+        <p class="cursor-pointer">PRODUCTS</p>
+        <p class="cursor-pointer">SUPPORT</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
